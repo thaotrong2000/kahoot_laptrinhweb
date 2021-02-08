@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="/css/dangnhap.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+<div class="modal">
+    <div class="login_header">
+        <img id="logo" src="\images\KahootLogo_Full_purple.png" alt="Logo">
+    </div>
+
+    <div class="modal__overlay">
+
+        <!--Login form-->
+        <div class="login-form">
+
+            <div class="auth-form__container_login">
+                <div class="auth-form__header">
+                    <label class="auth-form__heading">Đăng nhập</label>
+                    <!-- <a href="/users/register" class="auth-form__swicth-btn">Đăng ký</a> -->
+                </div>
+
+                <form action="/users/login" method="post">
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <label class="label_input">Email</label>
+                            <input type="email" class="auth-form__input" name="email">
+                        </div>
+                        <div class="auth-form__group">
+                            <label class="label_input">Mật khẩu</label>
+                            <input type="password" class="auth-form__input" name="password">
+                        </div>
+                    </div>
+
+                    <div class="auth-form__aside">
+                        <div class="auth-form__help">
+                            <a href="" class="auth-form__help-link auth-form__help-forgot">Quên mật khẩu</a>
+                            <a href="" class="auth-form__help-link auth-form__help-a">Cần trợ giúp?</a>
+                        </div>
+                    </div>
+                    <div class="auth-form__controls">
+                        <!-- <a href="/index.html" class="btn auth-form__controls-back btn--normal">TRỞ LẠI</a> -->
+                        <button class="btn btn--primary" type="submit">ĐĂNG NHẬP</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Kết nối mạng xã hội -->
+            <div class="auth-form__socials">
+                <a href="https://www.facebook.com/" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                    <i class="auth-form__socials-icon fa fa-facebook-official" aria-hidden="true"></i>
+                    <span class="auth-form__socials-title">Kết nối với Facebook</span>
+                </a>
+
+                <a href="https://accounts.google.com/" class="auth-form__socials-google btn btn--size-s btn--with-icon">
+                    <i class="auth-form__socials-icon fa fa-google" aria-hidden="true"></i>
+                    <span class="auth-form__socials-title">Kết nối với Google</span>
+                </a>
+
+            </div>
+            <!-- Đăng kí -->
+            <div class="auth-form__toregister">
+                <label class="toregister">Chưa có tài khoản? <a href="/users/register"><u>Đăng kí</u></a></label>
+            </div>
+        </div>
+    </div>
+</div>

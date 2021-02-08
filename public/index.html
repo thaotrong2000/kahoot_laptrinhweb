@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Play Kahoot! - Enter game PIN here!</title>
+    <!-- <link rel="shortcut icon" type="image/png" href="/images/favicon.ico"/> -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <form action="/player/">
+        <div class="form-field">
+            <img id="logo" src="\images\KahootLogo_Full_white.png" alt="This is Logo">
+
+        </div>
+        <div class="form-field">
+            <input id="pin" class="playerinput" type="text" name="pin" placeholder="Game PIN" autofocus/>
+        </div>
+        <br>
+        <div class="form-field">
+            <input id="name" class="playerinput" type="text" name="name" placeholder="Nickname" />
+        </div>
+        <br>
+
+        <div class="form-field">
+            <button id="joinButton">Ok, go!</button>
+        </div>
+    </form>
+    <br />
+    <center><a href="/users/login" id="tohost">Create your own kahoot for FREE at <b>Kahoot!</b></a></center>
+</body>
+
+</html>

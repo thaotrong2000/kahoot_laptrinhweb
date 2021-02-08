@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="/css/dangki.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+<div class="modal">
+
+    <div class="register_header">
+        <img id="logo" src="\images\KahootLogo_Full_purple.png" alt="Logo">
+    </div>
+
+    <div class="modal__overlay">
+
+        <!--Register form-->
+        <div class="register-form">
+
+            <div class="auth-form__container_register">
+                <div class="auth-form__header">
+                    <label class="auth-form__heading">Đăng kí</label>
+                </div>
+
+                <form action="/users/register" method="post">
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="name" name="name" class="auth-form__input" placeholder="Họ và tên"
+                                value="<%= typeof name != 'undefined' ? name : '' %>">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="email" name="email" class="auth-form__input" placeholder="Email"
+                                value="<%= typeof email != 'undefined' ? email : '' %>">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" name="password" class="auth-form__input" placeholder="Mật khẩu"
+                                value="<%= typeof password != 'undefined' ? password : '' %>">
+                            <input type="password" name="password2" class="auth-form__input"
+                                placeholder="Nhập lại mật khẩu"
+                                value="<%= typeof password2 != 'undefined' ? password2 : '' %>">
+                        </div>
+                    </div>
+                    <div class="auth-form__aside">
+                        <p class="auth-form__policy-text">
+                            Bằng việc đăng kí, bạn đã đồng ý với Kahoot! về<br />
+                            <a href="" class="auth-form__policy-link">Điều khoản dịch vụ</a>
+                            &
+                            <a href="" class="auth-form__policy-link">Chính sách bảo mật</a>
+                        </p>
+                    </div>
+                    <div class="auth-form__controls">
+                        <!-- <a href="/users/login" class="btn auth-form__controls-back btn--normal">TRỞ LẠI</a> -->
+                        <button type="submit" class="btn btn--primary">ĐĂNG KÍ</button>
+                    </div>
+                </form>
+
+
+                
+
+                <!-- <div class="auth-form__socials">
+                <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                    <i class="auth-form__socials-icon fa fa-facebook-official" aria-hidden="true"></i>
+                    <span class="auth-form__socials-title">Kết nối với Facebook</span>
+                </a>
+                <a href="" class="auth-form__socials-google btn btn--size-s btn--with-icon">
+                    <i class="auth-form__socials-icon fa fa-google" aria-hidden="true"></i>
+
+                    <span class="auth-form__socials-title">Kết nối với Google</span>
+                </a>
+            </div> -->
+            </div>
+            <div class="auth-form__tologin">
+                <label class="tologin">Đã có tài khoản? <a href="/users/login"><u>Đăng nhập</u></a></label>
+            </div>
+        </div>
+    </div>

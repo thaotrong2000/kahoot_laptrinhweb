@@ -1,0 +1,311 @@
+
+body {
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+
+    animation-direction: alternate; 
+    background-color: #F2F2F2 ; 
+
+    animation-direction: alternate;
+ 
+}
+
+
+#logo {
+    height: 35px;
+    margin: 10px 0px 10px 20px  
+}
+#title{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+#subtitle{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+#link{
+    color: white;
+}
+
+#back{
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+#gameButton{
+    font-size:40px;
+}
+/* #gameButton:hover{
+    cursor: pointer;
+} */
+
+/* #game-list{
+    float: left ; 
+    margin-left:60px;
+}
+
+#gameButton{
+    background-image: url("/images/kahoot_card_img.png");
+    
+    width : 200px ;
+    height: 200px ;
+    margin-right : 45px;
+    background-size: cover;
+} */
+
+.body1 {
+    /*   border: 2px solid rgb(0, 0, 0); */
+    min-width: 600px;
+      width: 100%;
+      height: 100%;
+      background-color: #F2F2F2;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      /* min-width: 720px; */
+}
+.webheader {
+    height: 55px;
+    width: 100%;
+    background-color:#46178F;
+    z-index: 1;
+    box-shadow: 0px 3px 2px rgb(219, 219, 219);
+    position: fixed;
+}
+#kahoot_list {
+    min-width: 456px;
+    margin-top: 100px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.kahoot-card__content-wrap {
+    min-width: 450px;
+    background-color: white;
+    margin: 10px 2px;
+    border-radius: 4px;
+    height: 140px;
+    position: relative;
+    box-shadow: 0px 0px 10px rgb(206, 206, 206);
+    /* border: 1px solid red; */
+}
+#kahoot-card__image {
+    margin: 2px;
+    height: 136px;
+    border-radius: 2px;
+}
+#kahoot-card__details {
+    background-color: white;
+    /* width: 100%; */
+    height: 136px;
+    position: absolute;
+    left: 205px;
+    top: 2px;
+    right: 1px;
+}
+#kahoot-card__title {
+    margin: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+.kahoot-card__information {
+
+}
+.kahoot-card__action-buttons {
+    background-color: #F8F8F8;
+    width: 100%;
+    height: 52px;
+    position: absolute;
+    right: 0px;
+    top: 86px;
+    border-radius: 4px;
+}
+#playerIcon{
+    margin: 5px 7px;
+    width: 38px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 94px;
+    top: 2px;
+}
+#playerIcon2{
+    width: 90px;
+    height: 38px;
+    position: absolute;
+    right: 8px;
+    top: 12px;
+}
+#question-mark {
+    width: 90px;
+    height: 38px;
+    position: absolute;
+    right: 0px;
+    top: 8px;
+}
+#create_btn {
+    width: 90px;
+    height: 38px;
+    position: absolute;
+    right: 190px;
+    top: 7px;
+    border-radius: 4px;
+    border: 1px solid white;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    box-shadow: 0px 4px rgb(182, 182, 182);
+    cursor: pointer;
+}
+#play {
+    margin: 9px 12px;
+    width: 64px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: #20740A;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+#repair {
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    margin: 9px 12px;
+    width: 64px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: #1058AF;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+#delete {
+    position: absolute;
+    top: 0px;
+    left: 160px;
+    margin: 9px 12px;
+    width: 64px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: #ff0000;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    border: 1px solid white;
+    /* cursor: not-allowed; */
+    cursor: pointer; 
+}
+.row{
+    display: flex;
+    align-items: center;
+}
+header{
+    min-width: 600px;
+    height: 55px;
+    width: 100%;
+    background-color: #46178F;
+    z-index: 1;
+    box-shadow: 0px 3px 2px rgb(219, 219, 219);
+    position: fixed;
+}
+.logo{
+    display: block;
+    max-width: 180px;
+    margin-left: 20px;
+}
+.logo img{
+    height: 35px;
+    margin: 10px 0px 10px 20px;
+}
+
+.container_bt {
+    height: 100%;
+    display: flex;
+    align-items: center;
+   /*  margin-right: 20px; */
+    text-decoration: none;
+    position: absolute;
+    right: 10px;
+}
+/* Dropdown Button */
+.dropbtn {
+    background-color:#46178F;
+    text-decoration: none;
+    margin-top: 5px;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    opacity: 0;
+}
+.dropbtn .fa{
+    margin-right: 8px;
+}
+/* ĐỔi màu nền khi hover và focus Dropdown button */
+/* Định dạng các thẻ bao bọc các menu */
+.dropdown {
+    margin-right: 10px;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+}
+ 
+/* Dropdown Content, mặc định sẽ được ẩn đi */
+.dropdown-content {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+    border-radius: 2px;
+    right: 0px;
+}
+ 
+/* Định dạng các thẻ a là các menu con */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+ 
+/* Thay đổi màu nền khi các menu con được hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+ 
+/* Hiển thị menu, ta sẽ dùng javascript để thêm class này vào các nôi dung cần được hiển thị */
+.show {display:block;}
+
+#img1 {
+    width: 39px;
+    margin-right: -46px;
+    margin-top:5px;
+    background-color: white;
+    border-radius: 50%; 
+}
+#img2 {
+    width: 25px;
+    margin-right: -41px;
+    margin-top: 6px;
+    border: 3px solid white;
+    border-radius: 50%; 
+}

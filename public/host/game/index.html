@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game | KahootClone</title>
+        <link rel = "stylesheet" href = "../../css/hostGameView.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="title"> 
+            <div id="title_title">
+                <div id="title_div">
+                    <h4 id = "questionNum">Câu hỏi </h4>
+                    <h4 id = "playersAnswered"></h4>
+                    <h3 id = "timerText"><span id = "num">10</span></h3>
+                </div>
+                <div id="bieudo">
+                    <div class = "square" id = "square1"></div>
+                    <div class = "square" id = "square2"></div>
+                    <div class = "square" id = "square3"></div>
+                    <div class = "square" id = "square4"></div>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        <!-- <div class = "square" id = "square1"></div>
+        <div class = "square" id = "square2"></div>
+        <div class = "square" id = "square3"></div>
+        <div class = "square" id = "square4"></div> -->
+        
+        <div class="question">
+            <div id="question_title">
+                <h2 id = "question">Câu hỏi</h2>
+            </div>
+            <div id="function">
+                <button onclick = "nextQuestion()" id = "nextQButton">Tiếp</button>
+                <button onclick = "skipQuestion()" id = "skipQButton">Bỏ qua</button>
+            </div>
+        </div>
+
+        <!-- <div id="function">
+            <button onclick = "nextQuestion()" id = "nextQButton">Next Question</button>
+            <button onclick = "skipQuestion()" id = "skipQButton">Skip Question</button>
+        </div> -->
+
+        <div id="answer">
+            <div id="answer_title">
+
+                <div class="as">
+                    <h3 id = "answer1">Answer1</h3>
+                </div>
+                <div class="as">
+                    <h3 id = "answer2">Answer2</h3>
+                </div>
+                <div class="as">
+                    <h3 id = "answer3">Answer3</h3>
+                </div>
+                <div class="as">
+                    <h3 id = "answer4">Answer4</h3>
+                </div>
+                <!-- <h3 id = "answer1">Answer</h3>
+        
+                <h3 id = "answer2">Answer1</h3>
+                
+                <h3 id = "answer3">Answer2</h3>
+                
+                <h3 id = "answer4">Answer3</h3> -->
+            </div>
+        </div>
+        
+        
+        <!-- <div id="function">
+            <button onclick = "nextQuestion()" id = "nextQButton">Next Question</button>
+            <button onclick = "skipQuestion()" id = "skipQButton">Skip Question</button>
+        </div> -->
+
+        
+        <!-- <h2 id = "winnerTitle">Top 5 Players</h4>
+        <h3 id = "winner1">1.</h3>
+        <h3 id = "winner2">2.</h3>
+        <h3 id = "winner3">3.</h3>
+        <h3 id = "winner4">4.</h3>
+        <h3 id = "winner5">5.</h3> -->
+        <div id="rank">
+                <h2 id = "winnerTitle">Top 5 Players</h4>
+                <h3 id = "winner1">1.</h3>
+                <h3 id = "winner2">2.</h3>
+                <h3 id = "winner3">3.</h3>
+                <h3 id = "winner4">4.</h3>
+                <h3 id = "winner5">5.</h3>
+        </div>
+        
+        <script src = "../../socket.io/socket.io.js"></script>
+        <script src = "../../js/libs/jqueryLibrary.js"></script>
+        <script src = "../../js/libs/deparam.js"></script>
+        <script src = "../../js/hostGame.js"></script>
+    </body>
+</html>

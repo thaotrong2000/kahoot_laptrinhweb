@@ -1,0 +1,79 @@
+<!-- <html>
+  
+<h1 id="ad">Welcome!</h1>
+<p>Create an account or login</p>
+<a href="/users/register" class="btn btn-primary btn-block mb-2"
+  >Register</a>
+<a href="/users/login"> Login</a>
+</html> -->
+
+<header>
+  <div class="container">
+      <div class="row">
+          <!--logo-->
+          <a href="#" title="Kahoot.com" class="logo"><img
+                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMxIiBoZWlnaHQ9IjQ2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGwtcnVsZT0ibm9uemVybyIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTY3LjUxIDE1Ljc4NmMtNS41NzYuMDk4LTEwLjM3IDQuODMtMTAuNzA4IDEwLjU2OC0uMzM4IDUuNzM4IDQuMTgzIDEwLjg2OCAxMC4wOTggMTEuNDU4IDUuOTE2LjU4OCAxMC43MDktNC4xNDUgMTAuNzA5LTEwLjU2OS0uMDAxLTYuNDI3LTQuNTIxLTExLjU1Ni0xMC4wOTktMTEuNDU3em0uNjk0IDE2LjYwOGMtMy4wNjcuMzYxLTUuNjc5LTIuNDQzLTUuNTAyLTYuMDE0LjE3NC0zLjU3MiAxLjYwMi01LjgwNCA0LjQ5NC01Ljg2NSAyLjg5Mi0uMDYxIDQuNjQyIDMuMjYgNC4zMTIgNy4xNDItLjI1MyAyLjk3My0yLjA5NCA0LjU5NC0zLjMwNCA0LjczN3ptMTAuNDg3LTQuNTY1YzAgNi40MjYgNC43OTMgMTEuMTU4IDEwLjcwOSAxMC41NjkgNS45MTUtLjU4OSAxMC40MzYtNS43MTkgMTAuMDk5LTExLjQ1Ny0uMzM3LTUuNzM4LTUuMTMzLTEwLjQ3MS0xMC43MS0xMC41NjktNS41NzctLjA5OC0xMC4wOTggNS4wMzItMTAuMDk4IDExLjQ1N3ptNi4xMDEuNDE1Yy0uMzMtMy44ODMgMS40Mi03LjIwMyA0LjMxMi03LjE0MiAyLjg5My4wNiA0LjMyIDIuMjkyIDQuNDk1IDUuODY0LjE3NiAzLjU3LTIuNDM3IDYuMzc0LTUuNTAzIDYuMDEzLTEuMjEtLjE0MS0zLjA1LTEuNzYzLTMuMzA0LTQuNzM1ek0wIDQwLjY1N1Y3LjY2OGw2LjkxMS0xLjc3My0uMDE3IDE0LjA1NEwxOC41NjUgOC42OTMgMjQuNTY3IDExbC04LjQ4MiA5LjQxIDUuNjI2IDIwLjQ5NGgtNi4xMDNsLTQuNTAyLTE1LjcwMi00LjI1MiA0LjE2NC4wNTcgMTEuNTM4TDAgNDAuNjU3em00Ny41OTItMTQuMzg5Yy0uMDAyLS4wNTguMDA0LjA3MSAwIDAgLjAwNC4wNjgtLjAwMi0uMDYgMCAweiIgZmlsbD0iI0ZGRiIvPjxwYXRoIGQ9Ik00Ny41OTIgMjYuMjY4Yy0uMDAyLS4wNDcuMDA0LjA0OCAwIDAgLjAwNC4wNDctLjAwMi0uMDQ5IDAgMHoiIGZpbGw9IiM0NjE3OEYiLz48cGF0aCBkPSJNNDcuNTkyIDI2LjI2OGMtLjAwNS0uMTIzLjAwOC4xNTMgMCAwIC4wMDguMTQxLS4wMDYtLjEzMyAwIDB6IiBmaWxsPSIjNDYxNzhGIi8+PHBhdGggZD0iTTQ3LjU5MiAyNi4yNjhjLS4wMDEtLjAyMi4wMDEuMDIxIDAgMCAuMDAxLjAyMi0uMDAxLS4wMjIgMCAweiIgZmlsbD0iIzQ2MTc4RiIvPjxwYXRoIGQ9Ik00Ny41OTIgMjYuMjY4Yy0uMDAyLS4wNy4wMDYuMTA3IDAgMCAuMDA3LjExNi0uMDAyLS4wNjcgMCAweiIgZmlsbD0iIzQ2MTc4RiIvPjxwYXRoIGQ9Ik00Ny41OTIgMjYuMjY4Yy0uMDAxLS4wMjQuMDAzLjA0MyAwIDAgLjAwMy4wNDEtLjAwMS0uMDI1IDAgMHoiIGZpbGw9IiM0NjE3OEYiLz48cGF0aCBkPSJNNDcuNTkyIDI2LjI2OGMtLjAwNC0uMDk0LjAwNi4xMDUgMCAwIC4wMDcuMTEtLjAwMy0uMDg5IDAgMHoiIGZpbGw9IiM0NjE3OEYiLz48cGF0aCBkPSJNNDcuNTkyIDI2LjI2OGMtLjAwNC0uMTEzLjAwNi4xMDYgMCAwIC4wMDcuMTE2LS4wMDQtLjEwNCAwIDB6IiBmaWxsPSIjNDYxNzhGIi8+PHBhdGggZD0iTTQ3LjU5MiAyNi4yNjhjLS4wMDEtLjAxNiAwIDAgMCAwIC4wMDEuMDA4LS4wMDEtLjAwOCAwIDB6IiBmaWxsPSIjNDYxNzhGIi8+PHBhdGggZD0iTTQ3LjU5MiAyNi4yNjhjLS4wMDEtLjAzMS4wMDEuMDIgMCAwIC4wMDIuMDI2LS4wMDEtLjAyNiAwIDB6IiBmaWxsPSIjNDYxNzhGIi8+PHBhdGggZD0iTTQ3LjU5MiAyNi4yNjhjLS4wMDEtLjAxLjAwMS4wMDkgMCAwIC4wMDEuMDA3LS4wMDEtLjAxMiAwIDB6IiBmaWxsPSIjNDYxNzhGIi8+PHBhdGggZD0iTTQ3LjU5MiAyNi4yNjhjLS4wMDItLjA1MS4wMDQuMDUxIDAgMCAuMDAzLjA0My0uMDAyLS4wNjEgMCAweiIgZmlsbD0iIzQ2MTc4RiIvPjxwYXRoIGQ9Ik00Ny41OTIgMjYuMjY4Yy0uMDA5LS4xOTQuMDEyLjIyOSAwIDAgLjAxLjE3Mi0uMDExLS4yNDEgMCAweiIgZmlsbD0iIzQ2MTc4RiIvPjxwYXRoIGQ9Ik00Ny41OTIgMjYuMjY4Yy0uMDAxLS4wMjMuMDAxLjAyIDAgMCAuMDAxLjAyMi0uMDAxLS4wMjIgMCAweiIgZmlsbD0iIzQ2MTc4RiIvPjxwYXRoIGQ9Ik01MC40NjggMzguMzU0aDYuMDY4bC0yLjI4Mi0xNi4xNTJjLS44NjMtOS40MzQtNC4zMDQtOS40NTYtMTAuNzI2LTcuNDA0TDQzLjM5NSAwbC01LjkwNiAxLjU3OC45NDEgMzYuNTc1IDUuODAxLjItLjMzNi0xOC44OThjMS4yNzEtLjU2MiA1LjQ3Mi0xLjc0NSA1LjYxMyAyLjkxM2wuNTYyIDYuNjQzLjM5OCA5LjM0M3ptNzMuMTYuMTlsLTEuNzEzIDQuMDM0IDMuNjI2IDIuNTMxIDMuNTc1LTIuMTM4LTEuNTA2LTQuNDI3aC0zLjk4MnpNOTguNDA5IDEzLjQyOWwuOTk0IDYuODY0aDQuMTU0bC4yODggMTYuMzI3cy0uNjQ5IDUuODc0IDguMjAyIDQuNTI5YzAgMCAyLjc3LS44MyAyLjY4Mi0yLjc4OXYtNi40NXMtMS44NjUgMS4xMTUtMy44OTIgMS4xMTUtMi4wNC0uOTg5LTIuMDQtLjk4OWwtLjU0Mi0xMi42NDUgNi40NzQtLjM2MXYtNC4xNTVsLTYuNjI4LS40MzcuMDgxLTguNTU3LTQuNjEtMS45MTEtLjAwNiA5LjYzOS01LjE1Ny0uMTh6bTIwLjM3NS05LjgyTDEzMSA1Ljk2MmwtNC43MTYgMzAuMjktNy41LTMyLjY0M3pNMjMuMSAxNS4wMTZsMS42MTggNC4yNzFjNC4wMTQtMi40MzggNi4yODIuMDEgNi4yODIuMDFsLS4wMzEgMi43MjZjLTExLjk2MSAyLjEyLTguOTM1IDEzLjMxLTguOTM1IDEzLjMxIDEuMjEgNC4zOTEgNS4xNDggNC4yMzkgNS4xNDggNC4yMzlsOC45NjguMDAxLjE3LTIwLjM2MWMtMS40MDUtOS40NzgtMTMuMjItNC4xOTYtMTMuMjItNC4xOTZ6bTcuODU2IDIwLjY2MXMtNC4zMzggMS4wNjItNC44MTctMy4yMTJjMCAwIC4wOTMtNi42MTUgNC45OC01LjkwNGwtLjE2MyA5LjExNnoiIGZpbGw9IiNGRkYiLz48L2c+PC9zdmc+"></a>
+          <!--menu-->
+          <nav >
+              <ul class="menu">
+                  <li><a href="#" title="Tin tức">Tin tức</a></li>
+                  <li><a href="#" title="Trường học">Trường học</a></li>
+                  <li><a href="#" title="Công việc">Công việc</a></li>
+                  <li><a href="#" title="Trang chủ">Trang chủ</a></li>
+                  <li><a href="#" title="Học viện">Học viện</a></li>
+              </ul>
+          </nav>
+          <!--dangnhap-->
+          <div class="container_bt">
+              <div class="dropdown">
+                  <a href="/users/login" value="laptrinh" class="dropbtn">Login</a>
+                  
+              </div>
+              <div class="dropdown">
+                  <a href="/users/register" value="thuthuat" class="dropbtn"> Register</a>
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+<div class="create">
+  <h1>Create your Own!</h1>
+  <a href="/">PLAY GAME</a>
+  
+</div>
+<section id="img">
+  <img src="../images/background.png" alt="" width="100%">
+</section>
+</body>
+<script>
+/* Thêm hoặc xóa class show ra khỏi phần tử */
+function myFunction(id) {
+  document.getElementById(id).classList.toggle("show");
+}
+//lấy tất cả các button menu
+var buttons = document.getElementsByClassName('dropbtn');
+//lấy tất cả các thẻ chứa menu con
+var contents = document.getElementsByClassName('dropdown-content');
+//lặp qua tất cả các button menu và gán sự kiện
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", function(){
+      //lấy value của button
+      var id = this.value;
+      //ẩn tất cả các menu con đang được hiển thị
+      for (var i = 0; i < contents.length; i++) {
+          contents[i].classList.remove("show");
+      }
+      //hiển thị menu vừa được click
+      myFunction(id);
+  });
+}
+//nếu click ra ngoài các button thì ẩn tất cả các menu con
+window.addEventListener("click", function(){
+   if (!event.target.matches('.dropbtn')){
+      for (var i = 0; i < contents.length; i++) {
+          contents[i].classList.remove("show");
+      }
+   }
+});
+</script>

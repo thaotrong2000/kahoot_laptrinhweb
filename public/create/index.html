@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create | KahootClone</title>
+        <link rel="stylesheet" href = "../css/create.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../css/toastr.css" rel="stylesheet"/>
+
+    </head>
+    <body>
+        <!-- <div class="tieude">
+            <a id = "back" href = "../">Back</a>
+            <h1 id = "title">Start a Kahoot Game</h1>
+            <h4 id = "subtitle">Choose a Game Below or <a id = "link" href = "quiz-creator/index.html">Create your Own!</a></h4>
+        </div>
+        
+        <div id = "game-list">
+            
+        </div>
+        
+        
+        <script src = "../socket.io/socket.io.js"></script>
+        <script src = "../js/create.js"></script> -->
+        <div class="body1">
+            <header>
+                <div class="container1">
+                    <div class="row">
+                        <!--logo-->
+                        <a href="/" title="Kahoot.com" class="logo"><img
+                                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMxIiBoZWlnaHQ9IjQ2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGwtcnVsZT0ibm9uemVybyIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTY3LjUxIDE1Ljc4NmMtNS41NzYuMDk4LTEwLjM3IDQuODMtMTAuNzA4IDEwLjU2OC0uMzM4IDUuNzM4IDQuMTgzIDEwLjg2OCAxMC4wOTggMTEuNDU4IDUuOTE2LjU4OCAxMC43MDktNC4xNDUgMTAuNzA5LTEwLjU2OS0uMDAxLTYuNDI3LTQuNTIxLTExLjU1Ni0xMC4wOTktMTEuNDU3em0uNjk0IDE2LjYwOGMtMy4wNjcuMzYxLTUuNjc5LTIuNDQzLTUuNTAyLTYuMDE0LjE3NC0zLjU3MiAxLjYwMi01LjgwNCA0LjQ5NC01Ljg2NSAyLjg5Mi0uMDYxIDQuNjQyIDMuMjYgNC4zMTIgNy4xNDItLjI1MyAyLjk3My0yLjA5NCA0LjU5NC0zLjMwNCA0LjczN3ptMTAuNDg3LTQuNTY1YzAgNi40MjYgNC43OTMgMTEuMTU4IDEwLjcwOSAxMC41NjkgNS45MTUtLjU4OSAxMC40MzYtNS43MTkgMTAuMDk5LTExLjQ1Ny0uMzM3LTUuNzM4LTUuMTMzLTEwLjQ3MS0xMC43MS0xMC41NjktNS41NzctLjA5OC0xMC4wOTggNS4wMzItMTAuMDk4IDExLjQ1N3ptNi4xMDEuNDE1Yy0uMzMtMy44ODMgMS40Mi03LjIwMyA0LjMxMi03LjE0MiAyLjg5My4wNiA0LjMyIDIuMjkyIDQuNDk1IDUuODY0LjE3NiAzLjU3LTIuNDM3IDYuMzc0LTUuNTAzIDYuMDEzLTEuMjEtLjE0MS0zLjA1LTEuNzYzLTMuMzA0LTQuNzM1ek0wIDQwLjY1N1Y3LjY2OGw2LjkxMS0xLjc3My0uMDE3IDE0LjA1NEwxOC41NjUgOC42OTMgMjQuNTY3IDExbC04LjQ4MiA5LjQxIDUuNjI2IDIwLjQ5NGgtNi4xMDNsLTQuNTAyLTE1LjcwMi00LjI1MiA0LjE2NC4wNTcgMTEuNTM4TDAgNDAuNjU3em00Ny41OTItMTQuMzg5Yy0uMDAyLS4wNTguMDA0LjA3MSAwIDAgLjAwNC4wNjgtLjAwMi0uMDYgMCAweiIgZmlsbD0iI0ZGRiIvPjxwYXRoIGQ9Ik00Ny41OTIgMjYuMjY4Yy0uMDAyLS4wNDcuMDA0LjA0OCAwIDAgLjAwNC4wNDctLjAwMi0uMDQ5IDAgMHoiIGZpbGw9IiM0NjE3OEYiLz48cGF0aCBkPSJNNDcuNTkyIDI2LjI2OGMtLjAwNS0uMTIzLjAwOC4xNTMgMCAwIC4wMDguMTQxLS4wMDYtLjEzMyAwIDB6IiBmaWxsPSIjNDYxNzhGIi8+PHBhdGggZD0iTTQ3LjU5MiAyNi4yNjhjLS4wMDEtLjAyMi4wMDEuMDIxIDAgMCAuMDAxLjAyMi0uMDAxLS4wMjIgMCAweiIgZmlsbD0iIzQ2MTc4RiIvPjxwYXRoIGQ9Ik00Ny41OTIgMjYuMjY4Yy0uMDAyLS4wNy4wMDYuMTA3IDAgMCAuMDA3LjExNi0uMDAyLS4wNjcgMCAweiIgZmlsbD0iIzQ2MTc4RiIvPjxwYXRoIGQ9Ik00Ny41OTIgMjYuMjY4Yy0uMDAxLS4wMjQuMDAzLjA0MyAwIDAgLjAwMy4wNDEtLjAwMS0uMDI1IDAgMHoiIGZpbGw9IiM0NjE3OEYiLz48cGF0aCBkPSJNNDcuNTkyIDI2LjI2OGMtLjAwNC0uMDk0LjAwNi4xMDUgMCAwIC4wMDcuMTEtLjAwMy0uMDg5IDAgMHoiIGZpbGw9IiM0NjE3OEYiLz48cGF0aCBkPSJNNDcuNTkyIDI2LjI2OGMtLjAwNC0uMTEzLjAwNi4xMDYgMCAwIC4wMDcuMTE2LS4wMDQtLjEwNCAwIDB6IiBmaWxsPSIjNDYxNzhGIi8+PHBhdGggZD0iTTQ3LjU5MiAyNi4yNjhjLS4wMDEtLjAxNiAwIDAgMCAwIC4wMDEuMDA4LS4wMDEtLjAwOCAwIDB6IiBmaWxsPSIjNDYxNzhGIi8+PHBhdGggZD0iTTQ3LjU5MiAyNi4yNjhjLS4wMDEtLjAzMS4wMDEuMDIgMCAwIC4wMDIuMDI2LS4wMDEtLjAyNiAwIDB6IiBmaWxsPSIjNDYxNzhGIi8+PHBhdGggZD0iTTQ3LjU5MiAyNi4yNjhjLS4wMDEtLjAxLjAwMS4wMDkgMCAwIC4wMDEuMDA3LS4wMDEtLjAxMiAwIDB6IiBmaWxsPSIjNDYxNzhGIi8+PHBhdGggZD0iTTQ3LjU5MiAyNi4yNjhjLS4wMDItLjA1MS4wMDQuMDUxIDAgMCAuMDAzLjA0My0uMDAyLS4wNjEgMCAweiIgZmlsbD0iIzQ2MTc4RiIvPjxwYXRoIGQ9Ik00Ny41OTIgMjYuMjY4Yy0uMDA5LS4xOTQuMDEyLjIyOSAwIDAgLjAxLjE3Mi0uMDExLS4yNDEgMCAweiIgZmlsbD0iIzQ2MTc4RiIvPjxwYXRoIGQ9Ik00Ny41OTIgMjYuMjY4Yy0uMDAxLS4wMjMuMDAxLjAyIDAgMCAuMDAxLjAyMi0uMDAxLS4wMjIgMCAweiIgZmlsbD0iIzQ2MTc4RiIvPjxwYXRoIGQ9Ik01MC40NjggMzguMzU0aDYuMDY4bC0yLjI4Mi0xNi4xNTJjLS44NjMtOS40MzQtNC4zMDQtOS40NTYtMTAuNzI2LTcuNDA0TDQzLjM5NSAwbC01LjkwNiAxLjU3OC45NDEgMzYuNTc1IDUuODAxLjItLjMzNi0xOC44OThjMS4yNzEtLjU2MiA1LjQ3Mi0xLjc0NSA1LjYxMyAyLjkxM2wuNTYyIDYuNjQzLjM5OCA5LjM0M3ptNzMuMTYuMTlsLTEuNzEzIDQuMDM0IDMuNjI2IDIuNTMxIDMuNTc1LTIuMTM4LTEuNTA2LTQuNDI3aC0zLjk4MnpNOTguNDA5IDEzLjQyOWwuOTk0IDYuODY0aDQuMTU0bC4yODggMTYuMzI3cy0uNjQ5IDUuODc0IDguMjAyIDQuNTI5YzAgMCAyLjc3LS44MyAyLjY4Mi0yLjc4OXYtNi40NXMtMS44NjUgMS4xMTUtMy44OTIgMS4xMTUtMi4wNC0uOTg5LTIuMDQtLjk4OWwtLjU0Mi0xMi42NDUgNi40NzQtLjM2MXYtNC4xNTVsLTYuNjI4LS40MzcuMDgxLTguNTU3LTQuNjEtMS45MTEtLjAwNiA5LjYzOS01LjE1Ny0uMTh6bTIwLjM3NS05LjgyTDEzMSA1Ljk2MmwtNC43MTYgMzAuMjktNy41LTMyLjY0M3pNMjMuMSAxNS4wMTZsMS42MTggNC4yNzFjNC4wMTQtMi40MzggNi4yODIuMDEgNi4yODIuMDFsLS4wMzEgMi43MjZjLTExLjk2MSAyLjEyLTguOTM1IDEzLjMxLTguOTM1IDEzLjMxIDEuMjEgNC4zOTEgNS4xNDggNC4yMzkgNS4xNDggNC4yMzlsOC45NjguMDAxLjE3LTIwLjM2MWMtMS40MDUtOS40NzgtMTMuMjItNC4xOTYtMTMuMjItNC4xOTZ6bTcuODU2IDIwLjY2MXMtNC4zMzggMS4wNjItNC44MTctMy4yMTJjMCAwIC4wOTMtNi42MTUgNC45OC01LjkwNGwtLjE2MyA5LjExNnoiIGZpbGw9IiNGRkYiLz48L2c+PC9zdmc+"></a>
+                        <!--menu-->
+                        <button id='create_btn' onclick="location.href='quiz-creator/index.html'" type="button">Tạo mới</button>
+                        <!--dangnhap-->
+                        <div class="container_bt">
+                            <div class="dropdown">
+                                <img id="img1" src="\images\playerIcon.svg" alt="">
+                                <button value="laptrinh" class="dropbtn">
+                                    
+                                    <!-- <i class="fa fa-user-circle" aria-hidden="true">User</i> -->
+                                </button>
+                                <div id="laptrinh" class="dropdown-content">
+                                    <a href="#">Cài đặt</a>
+                                    <a href="/users/login">Đăng xuất</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <img id="img2" src="\images\help.png" alt="">
+                                <button value="thuthuat" class="dropbtn">
+                                    <!-- <i class="fa fa-info-circle" aria-hidden="true">Info</i> -->
+                                </button>
+                                <div id="thuthuat" class="dropdown-content">
+                                    <a href="#">Help</a>
+                                    <a href="#">Blog</a>
+                                    <a href="#">Library</a>
+                                    <a href="#">Certification</a>
+                                    <a href="#">Shop</a>
+                                    <a href="#">Suggest a feature</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- <script>
+                /* Thêm hoặc xóa class show ra khỏi phần tử */
+                function myFunction(id) {
+                    document.getElementById(id).classList.toggle("show");
+                }
+                //lấy tất cả các button menu
+                var buttons = document.getElementsByClassName('dropbtn');
+                //lấy tất cả các thẻ chứa menu con
+                var contents = document.getElementsByClassName('dropdown-content');
+                //lặp qua tất cả các button menu và gán sự kiện
+                for (var i = 0; i < buttons.length; i++) {
+                    buttons[i].addEventListener("click", function(){
+                        //lấy value của button
+                        var id = this.value;
+                        //ẩn tất cả các menu con đang được hiển thị
+                        for (var i = 0; i < contents.length; i++) {
+                            contents[i].classList.remove("show");
+                        }
+                        //hiển thị menu vừa được click
+                        myFunction(id);
+                    });
+                }
+                //nếu click ra ngoài các button thì ẩn tất cả các menu con
+                window.addEventListener("click", function(){
+                     if (!event.target.matches('.dropbtn')){
+                        for (var i = 0; i < contents.length; i++) {
+                            contents[i].classList.remove("show");
+                        }
+                     }
+                });
+            </script> -->
+            <div id="kahoot_list"> <!-- Danh sách màn chơi -->
+                
+                <!-- <div class="kahoot-card__content-wrap"> 
+                    <div>
+                        <img id="kahoot-card__image" src="../../images/kahoot_card_img.png" alt="card">
+                    </div>
+                    <div id="kahoot-card__details"> 
+                        <div id="kahoot-card__title">
+                            Toan 1      
+                        </div>
+                       
+                        <div class="kahoot-card__action-buttons">
+                            <div id="play_btn" style="float:left">
+                                <button id="play" onClick= startGame()>Chơi</button>
+                            </div>
+                            <div id="repair_btn" style="float:left">
+                                <button id="repair">Sửa</button>
+                            </div>
+                            <div id="delete_btn" style="float:left">
+                                <button id="delete">Xóa</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>    -->
+
+               
+            </div>
+        </div>
+        <script>
+            /* Thêm hoặc xóa class show ra khỏi phần tử */
+            function myFunction(id) {
+                document.getElementById(id).classList.toggle("show");
+            }
+            //lấy tất cả các button menu
+            var buttons = document.getElementsByClassName('dropbtn');
+            //lấy tất cả các thẻ chứa menu con
+            var contents = document.getElementsByClassName('dropdown-content');
+            //lặp qua tất cả các button menu và gán sự kiện
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].addEventListener("click", function(){
+                    //lấy value của button
+                    var id = this.value;
+                    //ẩn tất cả các menu con đang được hiển thị
+                    for (var i = 0; i < contents.length; i++) {
+                        contents[i].classList.remove("show");
+                    }
+                    //hiển thị menu vừa được click
+                    myFunction(id);
+                });
+            }
+            //nếu click ra ngoài các button thì ẩn tất cả các menu con
+            window.addEventListener("click", function(){
+                 if (!event.target.matches('.dropbtn')){
+                    for (var i = 0; i < contents.length; i++) {
+                        contents[i].classList.remove("show");
+                    }
+                 }
+            });
+        </script>
+        <script src = "../socket.io/socket.io.js"></script>
+        <script src = "../js/create.js"></script> -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" ></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="../../js/toastr.js"></script>
+
+
+        
+    </body>
+</html>
